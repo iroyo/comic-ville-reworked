@@ -1,2 +1,2 @@
-include ':app', ':connector'
+include ':app', ':connector', ':network'
 rootProject.name='Comic Ville'
