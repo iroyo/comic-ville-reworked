@@ -1,0 +1,22 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion AppData.compileSdk
+    defaultConfig {
+        applicationId AppData.id
+        minSdkVersion AppData.minSdk
+        targetSdkVersion AppData.targetSdk
+        versionCode AppData.versionCode
+        versionName AppData.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+        }
+    }
+}
+
+dependencies {
+    implementation Libraries.kotlin
+}
