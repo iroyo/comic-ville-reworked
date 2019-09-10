@@ -24,6 +24,8 @@ object Versions {
     const val coroutines = "1.1.1"
     const val okHttp = "3.12.0"
     const val retrofit = "2.6.0"
+    const val serialization = "0.12.0"
+    const val serializationConverter = "0.4.0"
     const val room = "2.1.0"
 
     // UI
@@ -51,6 +53,8 @@ object Libraries {
     const val okhttp3Interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${Versions.serialization}"
+    const val kotlinSerializationConverter = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.serializationConverter}"
 
     const val room = "androidx.room:room-runtime:${Versions.room}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
