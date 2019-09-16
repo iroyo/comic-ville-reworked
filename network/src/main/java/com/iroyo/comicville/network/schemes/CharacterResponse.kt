@@ -2,6 +2,7 @@ package com.iroyo.comicville.network.schemes
 
 import com.iroyo.comicville.network.serializers.DateSerializer
 import com.iroyoraso.comicville.connector.model.Character
+import com.iroyoraso.comicville.connector.model.CharacterName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import java.util.*
@@ -20,7 +21,7 @@ data class CharacterResponse(
     @Serializable(DateSerializer::class) override val birth: Date?
 ) : Character {
 
-    override fun name() = object : Character.Name {
+    override fun name() = object : CharacterName {
         override val hero: String? = heroName
         override val real: String? = realName
     }

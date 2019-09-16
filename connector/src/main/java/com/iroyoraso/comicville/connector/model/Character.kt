@@ -12,11 +12,5 @@ interface Character {
     val summary: String?
     val appearances: Int
 
-    fun name(): Name
-
-    interface Name {
-        val hero: String?
-        val real: String?
-    }
-
+    fun name(): CharacterName
 }
