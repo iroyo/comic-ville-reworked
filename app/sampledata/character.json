@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "real_name": "Isaac",
+      "hero_name": "Mr Android",
+      "gender": "Male",
+      "birth": "27/02/1993",
+      "origin": "Alien"
+    },
+    {
+      "real_name": "Tony Stark",
+      "hero_name": "Iron Man",
+      "gender": "Male",
+      "birth": "17/07/1963",
+      "origin": "Human"
+    },
+    {
+      "real_name": "Dune",
+      "hero_name": "Dundu",
+      "gender": "Female",
+      "birth": "17/09/2003",
+      "origin": "Alien"
+    },
+    {
+      "real_name": "Pepe",
+      "hero_name": "Random",
+      "gender": "Male",
+      "birth": "27/02/1993",
+      "origin": "Alien"
+    },
+    {
+      "real_name": "Isaac",
+      "hero_name": "Mr Android",
+      "gender": "Male",
+      "birth": "27/02/1993",
+      "origin": "Alien"
+    },
+    {
+      "real_name": "Isaac",
+      "hero_name": "Mr Android",
+      "gender": "Male",
+      "birth": "27/02/1993",
+      "origin": "Alien"
+    },
+    {
+      "real_name": "Isaac",
+      "hero_name": "Mr Android",
+      "gender": "Male",
+      "birth": "27/02/1993",
+      "origin": "Alien"
+    },
+    {
+      "real_name": "Isaac",
+      "hero_name": "Mr Android",
+      "gender": "Male",
+      "birth": "27/02/1993",
+      "origin": "Alien"
+    }
+
+  ]
+}

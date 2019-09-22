@@ -18,9 +18,11 @@ object Versions {
     const val gradle = "3.5.0"
 
     // Core
+    const val material = "1.0.0"
     const val androidX = "1.1.0"
     const val androidXAnnotation = "1.1.0"
     const val lifecycle = "2.1.0"
+    const val paging = "2.1.0"
     const val coroutines = "1.1.1"
     const val okHttp = "3.12.0"
     const val retrofit = "2.6.0"
@@ -42,10 +44,13 @@ object Libraries {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.androidX}"
     const val androidxAnnotation = "androidx.annotation:annotation:${Versions.androidXAnnotation}"
 
+    const val material = "com.google.android.material:material:${Versions.material}"
+
     const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
     const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    const val pagingRuntime = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
