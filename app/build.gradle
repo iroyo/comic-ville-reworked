@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion AppData.compileSdk
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId AppData.id
         minSdkVersion AppData.minSdk
         targetSdkVersion AppData.targetSdk
@@ -23,6 +24,7 @@ dependencies {
 
     implementation Libraries.kotlin
     implementation Libraries.coreKTX
+    implementation Libraries.fragmentKTX
     implementation Libraries.appCompat
     implementation Libraries.material
 

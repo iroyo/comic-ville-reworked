@@ -3,7 +3,6 @@ package com.iroyoraso.comicville
 import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.iroyoraso.comicville.CharactersAdapter.CharacterHolder
 import com.iroyoraso.comicville.connector.model.Character

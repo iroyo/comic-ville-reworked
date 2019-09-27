@@ -1,10 +1,5 @@
 <resources>
     <string name="app_name">Comic Ville</string>
-    <string name="character_real_name">Real name:</string>
-    <string name="charcater_hero_name">Hero name:</string>
-    <string name="character_description">Description:</string>
     <string name="character_image">Hero image</string>
-    <string name="character_origin">Origin</string>
-    <string name="character_gender">Gender</string>
-    <string name="character_birth">Birth</string>
+    <string name="character_gender">Gender of the character</string>
 </resources>

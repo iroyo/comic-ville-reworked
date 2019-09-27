@@ -41,6 +41,7 @@ object Libraries {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
 
     const val coreKTX = "androidx.core:core-ktx:${Versions.androidX}"
+    const val fragmentKTX = "androidx.fragment:fragment-ktx:${Versions.androidX}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.androidX}"
     const val androidxAnnotation = "androidx.annotation:annotation:${Versions.androidXAnnotation}"
 
