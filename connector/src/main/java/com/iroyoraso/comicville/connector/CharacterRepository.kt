@@ -9,6 +9,6 @@ import com.iroyoraso.comicville.connector.model.ResultList
  */
 interface CharacterRepository {
 
-    suspend fun fetchCharacters(offset: Int, limit: Int): ResultList<Character>
+    suspend fun fetchCharacters(offset: Int, limit: Int): ListOutput<Character>
 
 }

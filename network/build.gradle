@@ -2,7 +2,9 @@ apply from: "$rootDir/common-android-library.gradle"
 apply plugin: "kotlinx-serialization"
 
 dependencies {
-    implementation project(":connector")
+    implementation project(":domain")
+    implementation Libraries.okhttp3
+    implementation Libraries.okhttp3Logger
     implementation Libraries.retrofit
     implementation Libraries.kotlinSerialization
     implementation Libraries.kotlinSerializationConverter
