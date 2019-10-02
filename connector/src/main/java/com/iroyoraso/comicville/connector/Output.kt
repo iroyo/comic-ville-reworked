@@ -10,7 +10,7 @@ typealias ListOutput<T> = Output<ResultList<T>>
 
 sealed class Output<T> {
 
-    class WantedOutput<T>(val value: T): Output<T>()
-    class UnwantedOutput<T> : Output<T>()
+    data class WantedOutput<T>(val value: T): Output<T>()
+    data class UnwantedOutput<T>(val error: Throwable) : Output<T>()
 
 }

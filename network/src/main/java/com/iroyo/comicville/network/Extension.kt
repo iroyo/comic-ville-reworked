@@ -8,14 +8,14 @@ import retrofit2.Response
  * Mail: iroyoraso@gmail.com
  */
 
-fun <T> Response<T>.manageResult() : Output<T> {
-    return if (isSuccessful) {
-        val result = body()
+fun <T> manageResult(response: Response<T>) : Output<T> {
+    return if (response.isSuccessful) {
+        val result = response.body()
         result?.let {
-            Output.WantedOutput(it)
+            Output.WantedOutput<T>(it)
         }
-        Output.UnwantedOutput()
+        Output.UnwantedOutput<T>()
     } else {
-        Output.UnwantedOutput()
+        Output.UnwantedOutput<T>()
     }
 }

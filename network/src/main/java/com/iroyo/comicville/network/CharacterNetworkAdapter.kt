@@ -15,29 +15,13 @@ import java.util.*
  * Mail: iroyoraso@gmail.com
  */
 internal class CharacterNetworkAdapter(
-    private val characterWebService: CharacterWebService
+    private val webService: CharacterWebService
 ) : CharacterNetworkConnector {
     
     override suspend fun loadCharacters(offset: Int, limit: Int): Output<ResultList<Character>> {
-        val response = characterWebService.getCharacters(offset, limit)
-
-        if (response.isSuccessful ) {
-                val element = CharacterResponse(
-                    0, "", "", "", 10, Date()
-                )
-                return Output.WantedOutput(test(0, 0, listOf<Character>(element)))
-        }
-        return Output.UnwantedOutput()
+        //return webService.getCharacters(offset, limit).manageResult<ResultList<Character>>()
+        TODO()
     }
-
-
-
-    class test<T>(
-        override val numberResultsPage: Int,
-        override val numberResultsTotal: Int,
-        override val results: List<T>
-    ) : ResultList<T>
-
 
 
 }
