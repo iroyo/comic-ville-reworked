@@ -8,9 +8,9 @@ import com.iroyoraso.comicville.connector.model.ResultList
  */
 typealias ListOutput<T> = Output<ResultList<T>>
 
-sealed class Output<T> {
+sealed class Output<out T> {
 
-    data class WantedOutput<T>(val value: T): Output<T>()
-    data class UnwantedOutput<T>(val error: Throwable) : Output<T>()
+    data class Success<T>(val value: T): Output<T>()
+    data class Failure<T>(val error: Throwable) : Output<T>()
 
 }

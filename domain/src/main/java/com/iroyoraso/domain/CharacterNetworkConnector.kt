@@ -1,5 +1,6 @@
 package com.iroyoraso.domain
 
+import com.iroyoraso.comicville.connector.ListOutput
 import com.iroyoraso.comicville.connector.Output
 import com.iroyoraso.comicville.connector.model.Character
 import com.iroyoraso.comicville.connector.model.ResultList
@@ -11,5 +12,6 @@ import com.iroyoraso.comicville.connector.model.ResultList
  */
 interface CharacterNetworkConnector {
 
-    suspend fun loadCharacters(offset: Int, limit: Int): Output<ResultList<Character>>
+    suspend fun loadCharacters(offset: Int, limit: Int): ListOutput<Character>
+
 }

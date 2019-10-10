@@ -9,14 +9,15 @@ import java.lang.Exception
  * Mail: iroyoraso@gmail.com
  */
 
-fun <T> manageResult(response: Response<T>) : Output<T> {
-    return if (response.isSuccessful) {
-        val result = response.body()
-        result?.let {
-            Output.WantedOutput(it)
+fun <T> Response<T>.output() : Output<T> {
+    return if (isSuccessful) {
+        val result = body()
+        if (result != null) {
+            Output.Success(result)
+        } else {
+            Output.Failure(Exception())
         }
-        Output.UnwantedOutput(Exception())
     } else {
-        Output.UnwantedOutput(Exception())
+        Output.Failure(Exception())
     }
 }
