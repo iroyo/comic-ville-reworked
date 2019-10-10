@@ -1,5 +1,7 @@
 package com.iroyo.comicville.network
 
+import com.iroyo.comicville.network.di.CharacterWebServiceModule
+import com.iroyo.comicville.network.di.CharacterWebServiceProvider
 import com.iroyoraso.domain.CharacterConnectorProvider.NetworkProvider
 import com.iroyoraso.domain.CharacterNetworkConnector
 
@@ -8,7 +10,7 @@ import com.iroyoraso.domain.CharacterNetworkConnector
  * Mail: iroyoraso@gmail.com
  */
 
-object CharacterNetworkModule : NetworkProvider, WebServiceProvider by WebServiceModule("") {
+object CharacterNetworkModule : NetworkProvider, CharacterWebServiceProvider by CharacterWebServiceModule {
 
     override val networkConnector: CharacterNetworkConnector by lazy {
         CharacterNetworkAdapter(characterWebService)

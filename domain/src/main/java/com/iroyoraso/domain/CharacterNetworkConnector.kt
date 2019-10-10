@@ -1,9 +1,7 @@
 package com.iroyoraso.domain
 
 import com.iroyoraso.comicville.connector.ListOutput
-import com.iroyoraso.comicville.connector.Output
 import com.iroyoraso.comicville.connector.model.Character
-import com.iroyoraso.comicville.connector.model.ResultList
 
 
 /**

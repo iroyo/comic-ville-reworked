@@ -11,7 +11,6 @@ internal class CharacterNetworkAdapter(
     private val webService: CharacterWebService
 ) : CharacterNetworkConnector {
 
-
     override suspend fun loadCharacters(offset: Int, limit: Int) = webService
             .getCharacters(offset, limit)
             .output()

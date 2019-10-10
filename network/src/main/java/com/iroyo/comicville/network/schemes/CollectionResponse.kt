@@ -1,6 +1,5 @@
 package com.iroyo.comicville.network.schemes
 
-import com.iroyoraso.comicville.connector.model.Character
 import com.iroyoraso.comicville.connector.model.ResultList
 import kotlinx.serialization.SerialName
 

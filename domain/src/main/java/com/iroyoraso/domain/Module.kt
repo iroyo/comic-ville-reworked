@@ -7,12 +7,10 @@ import com.iroyoraso.comicville.connector.CharacterRepository
  * Mail: iroyoraso@gmail.com
  */
 class Module(
-    networkProvider: CharacterConnectorProvider.NetworkProvider,
-    databaseProvider: CharacterConnectorProvider.DatabaseProvider
+    networkProvider: CharacterConnectorProvider.NetworkProvider
 ) : Injector {
 
     override val characterRepository: CharacterRepository = CharacterAdapter(
-        networkProvider.networkConnector,
-        databaseProvider.databaseConnector
+        networkProvider.networkConnector
     )
 }

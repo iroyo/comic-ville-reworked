@@ -9,8 +9,7 @@ import com.iroyoraso.comicville.connector.model.Character
  * Mail: iroyoraso@gmail.com
  */
 internal class CharacterAdapter(
-    private val networkConnector: CharacterNetworkConnector,
-    private val databaseConnector: CharacterDatabaseConnector
+    private val networkConnector: CharacterNetworkConnector
 ) : CharacterRepository {
 
     override suspend fun fetchCharacters(offset: Int, limit: Int): ListOutput<Character> {
