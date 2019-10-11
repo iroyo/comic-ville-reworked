@@ -9,20 +9,19 @@ import retrofit2.Retrofit
  * Created by iroyo on 2019-10-11.
  * Mail: iroyoraso@gmail.com
  */
-object NetworkingBaseRetrofit :
+object ComicVineRetrofitProvider :
     NetworkingProvider.RetrofitProvider,
-    NetworkingProvider.URLProvider by NetworkingComicVineURL,
-    NetworkingProvider.OkHttpProvider by NetworkingBaseOkHttp {
-
-    private val contentType = MediaType.get("application/json")
+    NetworkingProvider.URLProvider by ComicVineURLProvider,
+    NetworkingProvider.OkHttpProvider by ComicVineOkHttpProvider {
 
     override val retrofit: Retrofit by lazy {
+        val contentType = MediaType.get("application/json")
+
         Retrofit.Builder()
             .addConverterFactory(Json.asConverterFactory(contentType))
             .baseUrl(baseUrl)
             .client(okHttp)
             .build()
     }
-
 
 }

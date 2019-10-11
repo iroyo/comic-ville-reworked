@@ -10,7 +10,7 @@ import okhttp3.logging.HttpLoggingInterceptor.Level.NONE
  * Created by iroyo on 2019-10-11.
  * Mail: iroyoraso@gmail.com
  */
-object NetworkingInterceptorModule : NetworkingProvider.InterceptorProvider {
+object LoggingInterceptorProvider : NetworkingProvider.InterceptorProvider {
 
     private val level = if (BuildConfig.DEBUG) BODY else NONE
 

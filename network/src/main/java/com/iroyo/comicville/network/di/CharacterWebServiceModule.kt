@@ -8,7 +8,7 @@ import com.iroyo.comicville.network.webservice.CharacterWebService
  */
 object CharacterWebServiceModule :
     CharacterWebServiceProvider,
-    NetworkingProvider.RetrofitProvider by NetworkingBaseRetrofit {
+    NetworkingProvider.RetrofitProvider by ComicVineRetrofitProvider {
 
     override val characterWebService: CharacterWebService by lazy {
         retrofit.create(CharacterWebService::class.java)
