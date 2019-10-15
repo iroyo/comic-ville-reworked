@@ -1,0 +1,4 @@
+<resources>
+    <string name="character_image">Hero image</string>
+    <string name="character_gender">Gender of the character</string>
+</resources>

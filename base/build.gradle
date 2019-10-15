@@ -3,4 +3,11 @@ apply from: "$rootDir/common-android-library.gradle"
 dependencies {
     implementation project(":domain")
     implementation project(":network")
+
+    implementation Libraries.coreKTX
+    implementation Libraries.fragmentKTX
+    implementation Libraries.appCompat
+
+    implementation Libraries.lifecycleExtensions
+
 }

@@ -1,20 +1,19 @@
 package com.iroyoraso.comicville
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
+import com.iroyoraso.characters.CharactersListScreen
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        viewModel.list.observe(this, Observer {
 
-        })
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.app_content, CharactersListScreen())
+        transaction.commit()
     }
     
 }

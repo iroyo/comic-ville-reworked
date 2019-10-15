@@ -1,4 +1,4 @@
-package com.iroyoraso.comicville
+package com.iroyoraso.characters
 
 import androidx.recyclerview.widget.DiffUtil
 import com.iroyoraso.comicville.connector.model.Character

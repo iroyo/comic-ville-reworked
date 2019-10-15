@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion AppData.compileSdk
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         minSdkVersion AppData.minSdk
         targetSdkVersion AppData.targetSdk
         versionCode AppData.versionCode

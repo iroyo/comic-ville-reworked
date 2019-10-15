@@ -20,18 +20,8 @@ android {
 }
 
 dependencies {
-    implementation project(":connector")
-
     implementation Libraries.kotlin
-    implementation Libraries.coreKTX
-    implementation Libraries.fragmentKTX
     implementation Libraries.appCompat
-    implementation Libraries.material
 
-    implementation Libraries.coroutines
-    implementation Libraries.coroutinesAndroid
-
-    implementation Libraries.constraintLayout
-    implementation Libraries.lifecycleExtensions
-    implementation Libraries.pagingRuntime
+    implementation project(":characters")
 }

@@ -1,14 +1,18 @@
-package com.iroyoraso.comicville
+package com.iroyoraso.characters
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
+import com.iroyoraso.comicville.connector.CharacterRepository
 
 /**
  * Created by iroyo on 2019-09-26.
  * Mail: iroyoraso@gmail.com
  */
-class MainViewModel: ViewModel() {
+internal class CharactersViewModel(
+    private val characterRepository: CharacterRepository
+) : ViewModel() {
 
     private val pageListConfig = PagedList.Config.Builder()
         .setEnablePlaceholders(true)
@@ -17,8 +21,9 @@ class MainViewModel: ViewModel() {
         .setPageSize(10)
         .build()
 
-    private val dataSourceFactory = CharactersDataSourceFactory()
+    private val dataSourceFactory = CharactersDataSourceFactory(viewModelScope, characterRepository)
 
     val list = LivePagedListBuilder(dataSourceFactory, pageListConfig).build()
+
 
 }
