@@ -1,4 +1,4 @@
-package com.iroyoraso.domain
+package com.iroyoraso.comicville.connector
 
 import com.iroyoraso.comicville.connector.CharacterRepository
 

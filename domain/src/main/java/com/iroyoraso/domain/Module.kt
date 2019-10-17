@@ -1,6 +1,7 @@
 package com.iroyoraso.domain
 
 import com.iroyoraso.comicville.connector.CharacterRepository
+import com.iroyoraso.comicville.connector.Injector
 
 /**
  * Created by iroyo on 2019-09-27.

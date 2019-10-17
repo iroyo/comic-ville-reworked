@@ -1,7 +1,7 @@
 package com.iroyoraso.base
 
 import com.iroyo.comicville.network.CharacterNetworkModule
-import com.iroyoraso.domain.Injector
+import com.iroyoraso.comicville.connector.Injector
 import com.iroyoraso.domain.Module
 
 /**

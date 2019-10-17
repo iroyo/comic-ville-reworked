@@ -10,7 +10,7 @@ class ApiKeyInterceptor: Interceptor {
         val httpUrl = request.url()
 
         val url = httpUrl.newBuilder()
-            .addQueryParameter("api_key", "TEST")
+            .addQueryParameter("api_key", "KEY")
             .addQueryParameter("format", "json")
             .build()
 
