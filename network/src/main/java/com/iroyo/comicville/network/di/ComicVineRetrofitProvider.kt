@@ -2,6 +2,7 @@ package com.iroyo.comicville.network.di
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonConfiguration
 import okhttp3.MediaType
 import retrofit2.Retrofit
 
@@ -16,9 +17,9 @@ object ComicVineRetrofitProvider :
 
     override val retrofit: Retrofit by lazy {
         val contentType = MediaType.get("application/json")
-
+        val json = Json(JsonConfiguration(strictMode = false))
         Retrofit.Builder()
-            .addConverterFactory(Json.asConverterFactory(contentType))
+            .addConverterFactory(json.asConverterFactory(contentType))
             .baseUrl(baseUrl)
             .client(okHttp)
             .build()
