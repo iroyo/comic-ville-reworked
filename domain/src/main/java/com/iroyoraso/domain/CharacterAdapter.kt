@@ -3,6 +3,8 @@ package com.iroyoraso.domain
 import com.iroyoraso.comicville.connector.CharacterRepository
 import com.iroyoraso.comicville.connector.ListOutput
 import com.iroyoraso.comicville.connector.model.Character
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 /**
  * Created by iroyo on 2019-09-27.
@@ -12,8 +14,8 @@ internal class CharacterAdapter(
     private val networkConnector: CharacterNetworkConnector
 ) : CharacterRepository {
 
-    override suspend fun fetchCharacters(offset: Int, limit: Int): ListOutput<Character> {
-        return networkConnector.loadCharacters(offset, limit)
+    override suspend fun fetchCharacters(offset: Int, limit: Int) = withContext(Dispatchers.IO) {
+        networkConnector.loadCharacters(offset, limit)
     }
 
 }
