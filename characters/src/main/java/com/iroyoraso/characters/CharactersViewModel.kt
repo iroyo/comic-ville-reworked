@@ -5,13 +5,15 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.iroyoraso.comicville.connector.CharacterRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
 
 /**
  * Created by iroyo on 2019-09-26.
  * Mail: iroyoraso@gmail.com
  */
 internal class CharactersViewModel(
-    private val characterRepository: CharacterRepository
+    characterRepository: CharacterRepository
 ) : ViewModel() {
 
     private val pageListConfig = PagedList.Config.Builder()
@@ -24,6 +26,5 @@ internal class CharactersViewModel(
     private val dataSourceFactory = CharactersDataSourceFactory(viewModelScope, characterRepository)
 
     val list = LivePagedListBuilder(dataSourceFactory, pageListConfig).build()
-
 
 }
